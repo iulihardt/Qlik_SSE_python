@@ -73,7 +73,7 @@ class ExtensionService(SSE.ConnectorServicer):
         """
         return {
             0: '_impute',
-	        1: '_MINHA_FUNCAO_PYTHON',
+	        1: '_SomaLinha',
         }
 
 
@@ -95,7 +95,7 @@ class ExtensionService(SSE.ConnectorServicer):
     """
 
     @staticmethod
-    def _MINHA_FUNCAO_PYTHON(request):
+    def _SomaLinha(request):
         params = []
         for request_rows in request:     
             for row in request_rows.rows:                   
