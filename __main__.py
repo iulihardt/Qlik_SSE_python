@@ -9,7 +9,6 @@ import time
 import re
 from concurrent import futures
 from datetime import datetime
-
 # Add Generated folder to module path.
 PARENT_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 sys.path.append(os.path.join(PARENT_DIR, 'generated'))
@@ -18,26 +17,9 @@ import ServerSideExtension_pb2 as SSE
 import grpc
 from ssedata import FunctionType
 from scripteval import ScriptEval
-
-##IMPORT LIBRARIES FOR NFL
 import pandas as pd
-import _pickle as p
 from sklearn.impute import SimpleImputer
 import numpy as np
-import tensorflow as tf
-from tensorflow.keras.models import Sequential, save_model, load_model
-
-
-
-'''
-Tipos de variaveis:
-STRING = 0
-NUMERIC = 1
-DUAL = 2
-SCALAR = 0
-AGGREGATION = 1
-TENSOR = 2
-'''
 
 _ONE_DAY_IN_SECONDS = 60 * 60 * 24
 
@@ -75,7 +57,6 @@ class ExtensionService(SSE.ConnectorServicer):
             0: '_impute',
 	        1: '_SomaLinha',
         }
-
 
     @staticmethod
     def _get_function_id(context):
