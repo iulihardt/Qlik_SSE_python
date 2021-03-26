@@ -1,0 +1,26 @@
+{
+    "Functions" : [
+        {
+            "Id" : 0,
+            "Name" : "Impute",
+            "Type" : 2,
+            "ReturnType": 1,
+            "Params" : {
+                "Age": 1,
+				"High" : 1,
+                "Weight": 1
+            }
+        },
+		{
+            "Id" : 1,
+            "Name" : "SomaLinha",
+            "Type" : 2,
+            "ReturnType": 1,
+            "Params" : {
+                "p1": 1,
+				"p2" : 1,
+                "p3": 1
+            }
+        } 
+    ]
+}
